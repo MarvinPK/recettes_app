@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import {NavigationContainer} from '@react-navigation/native'
 import {createDrawerNavigator} from '@react-navigation/drawer' 
 import HomeScreen from '../screens/Home/HomeScreen';
-// import CategoriesScreen from '../screens/Categories/CategoriesScreen';
+import CategoriesScreen from '../screens/Categories/CategoriesScreen';
 // import RecipeScreen from '../screens/Recipe/RecipeScreen';
 // import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
@@ -25,8 +25,9 @@ function MainNavigator() {
           }
       }}
     >
-       <Stack.Screen name='Home' component={HomeScreen} /> 
-      {/* <Stack.Screen name='Categories' component={CategoriesScreen}/> */}
+      {/* Ici, le premier element sera la plage par defaut à l'ouverture de l'app */}
+      <Stack.Screen name='Home' component={HomeScreen} /> 
+      <Stack.Screen name='Categories' component={CategoriesScreen}/>
       {/* <Stack.Screen name='Recipe' component={RecipeScreen}/> */}
       {/* <Stack.Screen name='RecipesList' component={RecipesListScreen} /> */}
       {/* <Stack.Screen name='Ingredient' component={IngredientScreen} /> */}
