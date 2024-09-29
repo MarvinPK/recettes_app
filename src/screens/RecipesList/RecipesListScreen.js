@@ -21,6 +21,7 @@ export default function RecipesListScreen(props) {
   };
 
   const renderRecipes = ({ item }) => (
+    
     <TouchableHighlight underlayColor="white" onPress={() => onPressRecipe(item)}>
       <View style={styles.container}>
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
